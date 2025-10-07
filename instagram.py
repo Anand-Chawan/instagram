@@ -11,7 +11,7 @@ def extract_shortcode(instagram_url):
     """
     try:
         parts = instagram_url.strip('/').split('/')
-        if 'p' in parts or 'reel' in parts or 'tv' in parts or 's':
+        if 'p' in parts or 'reel' in parts or 'tv' in parts:
             index = next(i for i, part in enumerate(parts) if part in ['p', 'reel', 'tv'])
             return parts[index + 1]
         else:
